@@ -28,5 +28,9 @@ private lateinit var binding: ActivityMainBinding
             R.id.navigation_home, R.id.navigation_classify, R.id.navigation_recycle))
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        if (intent.getStringExtra("navigateTo") == "HomeFragment") {
+            navController.navigate(R.id.navigation_home)
+        }
     }
 }

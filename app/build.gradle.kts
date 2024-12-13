@@ -49,6 +49,13 @@ dependencies {
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.androidx.activity)
+    implementation(libs.retrofit)
+    implementation(libs.retrofit2.converter.gson)
+    implementation(libs.okhttp)  // Pastikan versi sesuai
+    implementation(libs.logging.interceptor) // optional untuk log
+    implementation(libs.glide)
+    implementation(libs.play.services.maps)
+    annotationProcessor(libs.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

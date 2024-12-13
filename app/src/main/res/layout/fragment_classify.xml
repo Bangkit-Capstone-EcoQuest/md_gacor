@@ -1,33 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.classify.ClassifyFragment">
+    android:fitsSystemWindows="true"
+    tools:context=".ui.classify.ClassifyFragment"
+    android:paddingBottom="?attr/actionBarSize">
+
+    <!-- Logo ImageView (added) -->
+    <ImageView
+        android:id="@+id/logo_scan"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:contentDescription="App Logo"
+        android:src="@drawable/trash_bottle"
+        app:layout_constraintBottom_toTopOf="@+id/scan_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scanner_area" />
 
     <!-- Area Scanner -->
+
+    <!-- Scan Description -->
     <LinearLayout
         android:id="@+id/scanner_area"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="#DFF1FF"
-        android:orientation="vertical"
         android:gravity="center"
-        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/scan_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Custom Scanner Shape (Placeholder) -->
         <View
-            android:layout_width="300dp"
-            android:layout_height="400dp"
+            android:layout_width="200dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center"
             android:background="@drawable/icon_scan"
-            android:layout_gravity="center"/>
+            android:scaleType="fitCenter" />
     </LinearLayout>
 
-    <!-- Scan Description -->
     <TextView
         android:id="@+id/scan_description"
         android:layout_width="wrap_content"
@@ -41,6 +58,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="16dp"/>
 
+    <!-- Select Image Button -->
+    <Button
+        android:id="@+id/select_image_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Select Image"
+        android:backgroundTint="@color/greenold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/scan_description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="16dp"/>
+
     <!-- Start Scanning Button -->
     <Button
         android:id="@+id/start_scanning_button"
@@ -49,10 +79,10 @@
         android:text="Start Scanning"
         android:backgroundTint="@color/greenold"
         android:textColor="#FFFFFF"
-        app:layout_constraintTop_toBottomOf="@id/scan_description"
+        app:layout_constraintTop_toBottomOf="@id/select_image_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_margin="16dp"/>
+        android:layout_marginBottom="16dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

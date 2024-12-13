@@ -1,12 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@color/black">
 
     <ImageView
         android:id="@+id/splash_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/ecoquest_logo"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside" />
+
+    <TextView
+        android:id="@+id/splash_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ecoquest_logo"/>
+        android:text="Welcome to EcoQuest"
+        android:textSize="28sp"
+        android:textColor="@android:color/white"
+        android:layout_below="@id/splash_image"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/splash_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Join Us and Make Earth a Greener Better Place"
+        android:textSize="17sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_below="@id/splash_text"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

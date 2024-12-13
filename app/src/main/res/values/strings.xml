@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">SampahCapsApp</string>
+    <string name="app_name">EcoQuest</string>
     <string name="title_home">Home</string>
     <string name="title_classify">Classify</string>
     <string name="title_recycle">Recycling Center</string>
+    <string name="maps_api_key">AIzaSyBm_AzmGqK3UCrL5wPZ_xe4uI-gFu4Br4U</string>
 </resources>
